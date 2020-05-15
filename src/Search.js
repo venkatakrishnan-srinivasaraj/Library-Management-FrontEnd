@@ -26,7 +26,7 @@ class Search extends React.Component {
               searchResults : []
           });
       }else{
-          fetch(`/search/`+newSearchString)
+          fetch(`http://localhost:8080/search/`+newSearchString)
               .then(res => res.json())
               .then(data => {
                   console.log({ data });

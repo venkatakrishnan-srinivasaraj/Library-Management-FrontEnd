@@ -43,7 +43,7 @@ class Fine extends React.Component {
         },
         message: "refreshing fines in background"
       }));
-        fetch(`/fine/refresh`)
+        fetch(`http://localhost:8080/fine/refresh`)
         .then(response=>response.text())
         .then((response) => {
           this.setState(

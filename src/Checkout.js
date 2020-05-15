@@ -34,7 +34,7 @@ class Checkout extends React.Component {
     
     console.log(this.state)
 
-    fetch("/book/checkout/", {
+    fetch("http://localhost:8080/book/checkout/", {
       method: "POST",
       body: JSON.stringify(checkout),
       headers: {

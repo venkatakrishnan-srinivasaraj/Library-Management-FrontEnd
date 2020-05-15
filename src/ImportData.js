@@ -19,7 +19,7 @@ class ImportData extends React.Component {
         this.setState({
             "message": "importing books data in background" 
         })
-        fetch(`/dataimport/book`)
+        fetch(`http://localhost:8080/dataimport/book`)
             .then(res => res.text())
             .then(res => {
                 console.log({ res });
@@ -34,7 +34,7 @@ class ImportData extends React.Component {
         this.setState({
             "message": "importing borrower data in background" 
         })
-        fetch(`/dataimport/borrower`)
+        fetch(`http://localhost:8080/dataimport/borrower`)
             .then(res => res.text())
             .then(res => {
                 console.log({ res });

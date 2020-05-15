@@ -24,7 +24,7 @@ class CheckinSearch extends React.Component {
                 searchResults : []
             });
         }else{
-            fetch(`/book/checkin/search/`+newSearchString)
+            fetch(`http://localhost:8080/book/checkin/search/`+newSearchString)
                 .then(res => res.json())
                 .then(data => {
                     console.log({ data });

@@ -19,7 +19,7 @@ class FineByBorrower extends React.Component {
     performPayment(event){
         event.preventDefault();
         const borrowerId = this.props.fineByBorrower.borrower.borrowerId
-        fetch(`/fine/payment/borrower/`+borrowerId)
+        fetch(`http://localhost:8080/fine/payment/borrower/`+borrowerId)
         .then((response) => {
                 if(!response.ok){
                     throw new Error(response.status);

@@ -28,7 +28,7 @@ class CheckinSearchResult extends React.Component {
     performCheckin(event){
         event.preventDefault();
         const bookLoanId = this.props.searchResult.bookLoanId
-        fetch(`/book/checkin/perform/`+bookLoanId)
+        fetch(`http://localhost:8080/book/checkin/perform/`+bookLoanId)
         .then(response=>response.text())
         .then((response) => {    
             this.setState({ 

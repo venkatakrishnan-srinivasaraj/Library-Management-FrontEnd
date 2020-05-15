@@ -41,7 +41,7 @@ class BorrowerManagement extends React.Component {
     event.preventDefault();
     let borrower = this.state.borrower;
     
-    fetch("/borrower", {
+    fetch("http://localhost:8080/borrower", {
       method: "POST",
       body: JSON.stringify(borrower),
       headers: {
